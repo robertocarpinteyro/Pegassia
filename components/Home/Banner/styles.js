@@ -5,9 +5,9 @@ export const BannerSection = styled.section`
   position: relative;
   height: 100vh;
   width: 100%;
-  margin-bottom: 450px;
+  margin-bottom: 305px;
   background: ${({ theme }) => theme.background};
-  overflow: visible;
+  overflow: hidden;
 
   &::before {
     content: '';
@@ -38,16 +38,8 @@ export const BannerSection = styled.section`
     width: 100%;
   }
 
-  ${({ theme }) => theme.breakpoints.small`
-    margin-bottom: 350px;
-  `};
-
   ${({ theme }) => theme.breakpoints.tablet`
-    margin-bottom: 200px;
-  `};
-
-  ${({ theme }) => theme.breakpoints.mobile`
-    margin-bottom: 150px;
+    margin-bottom: 90px;
   `};
 `;
 
@@ -64,8 +56,8 @@ export const BannerTitle = styled(motion.h1)`
   position: absolute;
   bottom: -93px;
   left: -20px;
-  font-size: 320px;
-  font-size: 20rem;
+  font-size: 420px;
+  font-size: 26.25rem;
   pointer-events: none;
   line-height: 0.6714285714;
   background: ${({ theme }) => theme.gradient};
@@ -74,8 +66,6 @@ export const BannerTitle = styled(motion.h1)`
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 30px ${({ theme }) => theme.accent}40;
   animation: holographic 3s ease-in-out infinite alternate;
-  white-space: nowrap;
-  width: max-content;
 
   @keyframes holographic {
     0% {
@@ -101,34 +91,21 @@ export const BannerTitle = styled(motion.h1)`
     -webkit-text-fill-color: transparent;
   }
 
-  ${({ theme }) => theme.breakpoints.medium`
-    font-size: 240px;
-    font-size: 15rem;
-    left: -15px;
-    bottom: -70px;
-  `};
-
   ${({ theme }) => theme.breakpoints.small`
     left: -10px;
     bottom: -63px;
-    font-size: 200px;
-    font-size: 12.5rem;
+    font-size: 280px;
+    font-size: 17.5rem;
     line-height: .6821428571;
   `};
 
   ${({ theme }) => theme.breakpoints.tablet`
     left: -6px;
     bottom: -36px;
+    max-width: calc(100% + 6px);
     font-size: 160px;
     font-size: 10rem;
     line-height: .68125;
-  `};
-
-  ${({ theme }) => theme.breakpoints.mobile`
-    left: -3px;
-    bottom: -20px;
-    font-size: 80px;
-    font-size: 5rem;
-    line-height: .7;
+    overflow: hidden;
   `};
 `;
