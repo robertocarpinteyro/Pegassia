@@ -35,6 +35,11 @@ const Banner = () => {
           loop
           autoPlay
           muted
+          playsInline
+          preload="metadata"
+          webkit-playsinline="true"
+          disablePictureInPicture
+          controlsList="nodownload nofullscreen noremoteplayback"
         />
       </VideoContainer>
       <BannerTitle
